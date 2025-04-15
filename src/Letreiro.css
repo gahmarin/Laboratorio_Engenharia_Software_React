@@ -1,0 +1,37 @@
+.letreiro-container {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1e1e2f;
+    color: #00ffea;
+    padding: 20px 30px;
+    margin: 20px auto;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+    width: fit-content;
+    min-width: calc(17ch + 20px);
+    max-width: 90%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  
+  .letreiro-texto {
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+  }
+  
+  .cursor {
+    display: inline-block;
+    width: 10px;
+    animation: blink 1s step-start infinite;
+    color: #00ffea;
+  }
+  
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+  
