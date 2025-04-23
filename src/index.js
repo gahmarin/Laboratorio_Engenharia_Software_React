@@ -9,8 +9,6 @@ import Relogio from './Relogio';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <div style={{textAlign: 'center', paddingTop: '40px'}}>
-    <Letreiro />
-    <Relogio />
     <App />
   </div>
 );
