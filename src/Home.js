@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import './Home.css';
 
@@ -13,6 +14,9 @@ const Home = () =>{
                     </li>
                     <li>
                         <Link to="/Atv02">Atividade 2</Link>
+                    </li>
+                    <li>
+                        <Link to="/Atv03">Atividade 3</Link>
                     </li>
                 </ul>
             </nav>
