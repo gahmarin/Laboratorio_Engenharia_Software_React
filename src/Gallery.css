@@ -1,0 +1,62 @@
+.Gallery {
+  padding: 2rem;
+  background-color: #f4f4f4;
+  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+.Gallery h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #282c34;
+}
+
+.Gallery article {
+  background-color: white;
+  padding: 1rem;
+  margin: 1rem auto;
+  border-radius: 8px;
+  max-width: 600px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.avatar {
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0.5rem;
+  border: 3px solid #282c34;
+}
+
+.photo {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.item {
+  list-style: none;
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+.item del {
+  color: #888;
+}
+
+section {
+  margin: 2rem auto;
+  padding: 1rem;
+  background: white;
+  border-radius: 10px;
+  max-width: 600px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+ul, ol {
+  text-align: left;
+  margin: 1rem auto;
+  padding-left: 1.5rem;
+}
