@@ -1,0 +1,139 @@
+/* Container principal */
+.Attach {
+    font-family: Arial, sans-serif;
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  /* Accordion */
+  .Attach h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .Attach .panel {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .Attach .panel h3 {
+    margin-top: 0;
+  }
+  
+  .Attach .panel button {
+    padding: 0.4rem 0.8rem;
+    border: none;
+    background-color: #0077cc;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .Attach .panel button:hover {
+    background-color: #005fa3;
+  }
+  
+  /* Chat */
+  .Attach .chat {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .Attach .chat textarea {
+    width: 100%;
+    min-height: 80px;
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  .Attach .chat button {
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .Attach .chat button:hover {
+    background-color: #005fa3;
+  }
+  
+  /* Contact List */
+  .Attach .contact-list ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .Attach .contact-list li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .Attach .contact-list button {
+    width: 100%;
+    padding: 0.5rem;
+    background-color: #eaeaea;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .Attach .contact-list button:hover {
+    background-color: #d5d5d5;
+  }
+  
+  /* Form Ticket */
+  .Attach input {
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Form Quiz */
+  .Attach textarea {
+    width: 100%;
+    min-height: 80px;
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  .Attach form button {
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .Attach form button:disabled {
+    background-color: #94d3a2;
+    cursor: not-allowed;
+  }
+  
+  .Attach form button:hover:not(:disabled) {
+    background-color: #1f9239;
+  }
+  
+  /* Error message */
+  .Attach .Error {
+    color: red;
+    margin-top: 0.5rem;
+  }
+  

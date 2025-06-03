@@ -1,46 +1,51 @@
 import { useState} from 'react';
 import { sculptureList } from "./data1.js";
+import React, { useEffect } from 'react';
 import Clock from './Clock.js';
 import './ComponentsAtv04.css';
 
-export function Gallery() {
-    const [index, setIndex] = useState(0);
-    const [showMore, setShowMore]= useState(false);
+export function SculptureGallery() {
+  const [index, setIndex] = useState(0);
+  const [showMore, setShowMore] = useState(false);
 
-    function handleNextClick() {
-    setIndex(index + 1);
-    }
+  function handleNextClick() {
+          setIndex((index) => (index + 1)%sculptureList.length);
+  }
 
-    function handleMoreClick(){
-        setShowMore(!showMore);
-    }
+  function handleMoreClick() {
+      setShowMore(!showMore);
+  }
 
-let sculpture = sculptureList[index];
-return (
-    <>
-        <button onClick={handleClick}>
-            Next
-        </button>
-        <h2>
-            <i>{sculpture.name} </i>
-            by {sculpture.artist}
-        </h2>
-        <h3>
-            ({index + 1} of {sculptureList.length})
-        </h3>
-        <button onClick={handleMoreClick}>
-            {showMore ? 'Hide' : 'Show'} details
-        </button>
-        {showMore && <p>{sculpture.description}</p>}
-        <img
-            src={sculpture.url}
-            alt={sculpture.alt}
-        />
-    </>
-    );
+  let sculpture = sculptureList[index];
+  return(
+      <>
+          <button name="next" onClick={handleNextClick}>
+              Next
+          </button>
+          <button onClick={handleMoreClick}>
+              {showMore ? 'Hide' : 'Show'} Details
+          </button>
+          <h2>
+              <i>{sculpture.name} </i>by {sculpture.artist}
+          </h2>
+          <h3>
+              ({index+1} of {sculptureList.length})
+          </h3>
+          <img 
+              src={sculpture.url}
+              alt={sculpture.alt}
+              />
+          {showMore && <p>{sculpture.description}</p>}
+      </>
+  )
 }
 
-
+let nextId = 3;
+const initialList = [
+  { id: 0, title: 'Big Bellies', seen: false },
+  { id: 1, title: 'Lunar Landscape', seen: false },
+  { id: 2, title: 'Terracotta Army', seen: true },
+];
 
 
 export function BucketList() {
@@ -49,12 +54,7 @@ export function BucketList() {
     initialList
   );
 
-  let nextId = 3;
-const initialList = [
-  { id: 0, title: 'Big Bellies', seen: false },
-  { id: 1, title: 'Lunar Landscape', seen: false },
-  { id: 2, title: 'Terracotta Army', seen: true },
-];
+
 
   function handleToggleMyList(artworkId, nextSeen) {
     setMyList(myList.map(artwork =>
@@ -113,33 +113,28 @@ function ItemList({ artworks, onToggle }) {
   );
 }
 
-export function Clock({ time }) {
-    return (
-        <>
-            <h1>{time}</h1>
-        </>
-    )
-}
+
+
 
 function useTime() {
-    const [time, setTime] = useState(() => new Date());
-    useEffect(() => {
-        const id = setInterval(() => {
-            setTime(new Date());
-        }, 1000);
-        return () => clearInterval(id);
-    }, []);
-    return time;
+  const [time, setTime] = useState(() => new Date());
+  useEffect(() => {
+      const id = setInterval(() => {
+          setTime(new Date());
+      }, 1000);
+      return () => clearInterval(id);
+  }, []);
+  return time;
 }
 
 export function ClockApp() {
-    const time = useTime();
-    return (
-        <>
-            <h1>Clock App</h1>
-            <Clock time={time.toLocaleTimeString()}/>
-        </>
-    )
+  const time = useTime();
+  return (
+      <>
+          <h1>Clock App</h1>
+          <Clock time={time.toLocaleTimeString()}/>
+      </>
+  )
 }
 
 export function Counter() {
@@ -194,7 +189,7 @@ let initialCounters = [
     );
   }
 
-  export function Gallery1() {
+  export function Gallery() {
     return (
         <section>
             <h1>Inspiring Sculptures</h1>
@@ -402,13 +397,14 @@ export function List() {
   );
 }
 
-let initialArtists = [
-  { id: 0, name: 'Marta Colvin Andrade' },
-  { id: 1, name: 'Lamidi Olonade Fakeye' },
-  { id: 2, name: 'Louise Nevelson' },
-];
+
 
 export function List2() {
+  let initialArtists = [
+    { id: 0, name: 'Marta Colvin Andrade' },
+    { id: 1, name: 'Lamidi Olonade Fakeye' },
+    { id: 2, name: 'Louise Nevelson' },
+  ];
   const [artists, setArtists] = useState(
     initialArtists
   );
@@ -439,17 +435,18 @@ export function List2() {
 
 
 export function List3() {
+  let nextId = 3;
+  const initialArtists = [
+    { id: 0, name: 'Marta Colvin Andrade' },
+    { id: 1, name: 'Lamidi Olonade Fakeye' },
+    { id: 2, name: 'Louise Nevelson' },
+  ];
   const [name, setName] = useState('');
   const [artists, setArtists] = useState(
     initialArtists
   );
 
-  let nextId = 3;
-const initialArtists = [
-  { id: 0, name: 'Marta Colvin Andrade' },
-  { id: 1, name: 'Lamidi Olonade Fakeye' },
-  { id: 2, name: 'Louise Nevelson' },
-];
+
 
   function handleClick() {
     const insertAt = 1; // Could be any index
@@ -632,13 +629,13 @@ export function Toolbar() {
 export default function ComponentsAtv04() {
   return (
     <section className='Gallery'>
-      <Gallery />
+      <SculptureGallery />
       <BucketList />
       <Clock />
       <ClockApp />
       <Counter />
       <CounterList />
-      <Gallery1 />
+      <Gallery />
       <Form />
       <Form2 />
       <Form3 />
