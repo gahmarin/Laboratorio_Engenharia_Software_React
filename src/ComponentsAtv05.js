@@ -46,7 +46,6 @@ export function Chat({ contact }) {
         </section>
     );
 }
-
 export function ContactList({selectedContact, contacts = [], onSelect}) {
     return(
         <section className="contact-list">
